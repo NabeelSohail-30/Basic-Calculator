@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" type="text/javascript"></script>
+    <title>Basic Calculator</title>
 </head>
+
 <body>
-    
-    <form action="" onSubmit="return false">
-        number 1 <input type="text" id="num1">
-        <br>
-        number 2 <input type="text" id="num2">
-        <br>
-        <label for="" id="result"></label>
-        <br>
-        <br>
-        <button type="submit" onClick="doSum();">+</button>
-        <button type="submit" onClick="doMinus();">-</button>
-        <button type="submit" onClick="doMultiply();">*</button>
-        <button type="submit" onClick="doDivide();">/</button>
-    </form>
 
-    <script>
+    <div class="panel">
+        <form action="" onSubmit="return false">
+            <div class="container">
 
-        function doSum() {
-            let Num1 = Number(document.querySelector("#num1").value);
-            let Num2 = Number(document.querySelector("#num2").value);
-            let result = Num1+Num2;
+                <div class="panel-head">
+                    Basic Calculator
+                </div>
 
-            console.log("\nnum1: ", Num1, "\nNum2: ", Num2, "\nResult: ", result);
-            document.querySelector("#result").innerHTML = "Result: " + result;
-        }
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="">Number 1</label>
+                                <input type="number" id="num1" class="form-control" placeholder="Enter Number" required>
+                            </div>
+                        </div>
+                    </div>
 
-        function doMinus() {
-            let Num1 = Number(document.querySelector("#num1").value);
-            let Num2 = Number(document.querySelector("#num2").value);
-            let result = Num2-Num1;
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="">Number 2</label>
+                                <input type="number" id="num2" class="form-control" placeholder="Enter Number" required>
+                            </div>
+                        </div>
+                    </div>
 
-            console.log("\nnum1: ", Num1, "\nNum2: ", Num2, "\nResult: ", result);
-            document.querySelector("#result").innerHTML = "Result: " + result;
-        }
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="">Result</label>
+                                <input type="text" id="result" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
 
-        function doMultiply() {
-            let Num1 = Number(document.querySelector("#num1").value);
-            let Num2 = Number(document.querySelector("#num2").value);
-            let result = Num1*Num2;
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <button type="submit" onClick="doSum();">+</button>
+                            <button type="submit" onClick="doMinus();">-</button>
+                            <button type="submit" onClick="doMultiply();">*</button>
+                            <button type="submit" onClick="doDivide();">/</button>
+                        </div>
+                    </div>
+                </div>
 
-            console.log("\nnum1: ", Num1, "\nNum2: ", Num2, "\nResult: ", result);
-            document.querySelector("#result").innerHTML = "Result: " + result;
-        }
-
-        function doDivide() {
-            let Num1 = Number(document.querySelector("#num1").value);
-            let Num2 = Number(document.querySelector("#num2").value);
-            let result = Num1/Num2;
-
-            console.log("\nnum1: ", Num1, "\nNum2: ", Num2, "\nResult: ", result);
-            document.querySelector("#result").innerHTML = "Result: " + result;
-        }
-    </script>
+            </div>
+        </form>
+    </div>
 
 </body>
+
 </html>
